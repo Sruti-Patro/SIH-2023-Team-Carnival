@@ -43,7 +43,7 @@ ElevationScroll.propTypes = {
   window: PropTypes.func,
 };
 
-export default function NavBarD(props) {
+export default function NavBarD() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
