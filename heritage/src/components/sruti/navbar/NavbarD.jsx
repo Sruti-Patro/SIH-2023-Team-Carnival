@@ -16,7 +16,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Slide } from "@mui/material";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Dashboard", "Logout"];
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -43,7 +43,7 @@ ElevationScroll.propTypes = {
   window: PropTypes.func,
 };
 
-export default function NavBarD(props) {
+export default function NavBarD() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -170,7 +170,7 @@ export default function NavBarD(props) {
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="" src="/static/images/avatar/2.jpg" />
+                    <Avatar alt="" src="/static/images/avatar/2.jpg"  />
                   </IconButton>
                 </Tooltip>
                 <Menu
@@ -191,7 +191,7 @@ export default function NavBarD(props) {
                 >
                   {settings.map((setting) => (
                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
+                      <Typography component="a" href="/profile" textAlign="center">{setting}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
