@@ -18,16 +18,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from "@mui/icons-material/Mail";
-// import { orange } from '@mui/material/colors';
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { Avatar, Link } from "@mui/material";
-// import Home from '../Pages/Home';
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import BookIcon from "@mui/icons-material/Book";
-// import h1 from 'assets/h1.jpg'
 import "./css.css";
 
 const drawerWidth = 240;
