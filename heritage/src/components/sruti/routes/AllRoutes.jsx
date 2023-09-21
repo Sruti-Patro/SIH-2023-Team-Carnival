@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Blog from "../../../pages/sruti/Blog";
 import Discover from "../../../pages/sruti/Discover";
 import ViewBlog from "../../../pages/sruti/ViewBlog";
+import Profile from "../../../pages/sruti/Profile";
 
 function AllRoutes() {
   return (
@@ -12,6 +13,7 @@ function AllRoutes() {
         <Route path="/blog/:id" element={<ViewBlog />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/discover" element={<Discover />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
       </Routes>
     </>
   );

@@ -24,7 +24,6 @@ import { orange } from '@mui/material/colors';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Link } from '@mui/material';
-import Home from '../Pages/Home';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import BookIcon from '@mui/icons-material/Book';
 // import h1 from 'assets/h1.jpg'
@@ -95,7 +94,7 @@ export default function PersistentDrawerLeft() {
     navigate('/');
   };
   const navigatetoBlog=()=>{
-    navigate('/');
+    navigate('/blog');
   };
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -149,7 +148,7 @@ export default function PersistentDrawerLeft() {
         <List sx={{backgroundColor:"orange"}}>
           {['Home', 'Travel', 'Calendar', 'Drafts'].map((text, index) => (
             <ListItem key={text} disablePadding >
-              <ListItemButton>
+              <ListItemButton onClick={()=>(`navigateto${text}()`)}>
                 <ListItemIcon>
                   {index === 0 ? <Link onClick={navigatetoHome}><HomeIcon /></Link>:"" } 
                   {index === 1 ? <Link onClick={navigatetoTravel}><FlightTakeoffIcon/></Link>:"" }
@@ -165,7 +164,7 @@ export default function PersistentDrawerLeft() {
         <List sx={{backgroundColor:"orange"}}>
           {['Upgrade','Blog'].map((text, index) => (
             <ListItem key={text} disablePadding>
-              <ListItemButton>
+              <ListItemButton  onClick={()=>(`navigateto${text}()`)}>
                 <ListItemIcon>
                   {index  === 0 ? <Link onClick={navigatetoUpgrade}><WorkspacePremiumIcon /></Link> : <Link onClick={navigatetoBlog}><BookIcon /></Link>}
                 </ListItemIcon>
