@@ -1,0 +1,23 @@
+.mainDiv{
+    margin: 0;
+    padding: 0;
+}
+.upperDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.lowerDiv{
+    display: flex;
+    flex-direction: row;
+}
+.avatar{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 2%;
+    padding: 0 2%;
+}
+/* .profile{
+
+} */
