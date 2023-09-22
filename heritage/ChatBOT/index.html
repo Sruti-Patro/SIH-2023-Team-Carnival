@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col">
+        
+        <header class="bg-blue-600 text-white py-4 text-center text-xl relative">
+            <a href="#" class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                <span class="material-icons text-2xl align-middle">home</span>
+            </a>
+            Chatbot
+            <a href="#" class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                <span class="material-icons text-2xl align-middle">account_circle</span>
+            </a>
+        </header>        
+  
+        <div class="flex flex-1">
+            
+            <div class="bg-gray-200 p-4 w-1/5 hidden md:block">
+                <h2 class="text-lg font-semibold mb-2">Prompts</h2>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full mb-2 cursor-pointer predefined-prompt" data-prompt="Hello">Hello</button>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full mb-2 cursor-pointer predefined-prompt" data-prompt="Puri">Puri</button>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full mb-2 cursor-pointer predefined-prompt" data-prompt="Haridwar">Haridwar</button>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-full mb-2 cursor-pointer predefined-prompt" data-prompt="Dwarka">Dwarka</button>
+            </div>
+
+            
+            <div class="bg-white p-4 shadow-lg rounded-lg flex-1 ml-4 mr-8 my-8 md:mr-4 md:ml-auto md:max-w-lg md:rounded-xl chat-container">
+                <div class="overflow-y-auto" id="chat-box">
+                    
+                </div>
+
+                <div class="text-gray-400 italic text-center mt-2" id="typing-indicator" style="display: none;">
+                    Bot is typing...
+                </div>
+            </div>
+        </div>
+
+    
+        
+        <div class="bg-white p-4 shadow-lg rounded-lg mx-0 mb-8 md:mx-0 md:max-w-full md:rounded-xl" id="input">
+            <div class="flex items-center">
+                <input type="text" id="user-input" placeholder="Type your message..."
+                    class="flex-1 py-2 px-3 border border-gray-300 rounded-full focus:outline-none focus:ring focus:border-blue-500 w-full">
+                <button id="send-button"
+                        class="ml-2 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                    Send
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
